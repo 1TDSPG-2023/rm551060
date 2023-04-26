@@ -50,31 +50,33 @@
 
     <footer class="rodape">
         <h2>Fale conosco</h2>
+        
+        <form action="/info.html" method="get">
+            <fieldset>
+                <legend>Login</legend>
+                <div>
+                    <label for="idUser">Usuário</label>
+                    <input type="text" name="txtUser" id="idUser" placeholder="Usuário">
+                </div>
+                <div>
+                    <label for="idPass">Senha</label>
+                    <input type="password" name="txtPass" id="idPass" placeholder="Senha">
+                </div>
+                <div>
+                    <label for="idGravaDados">Gravar Dados</label>
+                    <input type="checkbox" name="chkDta" id="idGravaDados" value="ok" placeholder="Usuário">
+                </div>
+                <div>
+                    <button type="submit" value="Login"></button>
+                </div>
+            </fieldset>
+        </form>
+
         <nav>
             <a href="#"><img src="./img/social-1.png" alt="logo"></a>
             <a href="#"><img src="./img/social-2.png" alt="logo"></a>
             <a href="#"><img src="./img/social-3.png" alt="logo"></a>
         </nav>
-
-        <div>
-            <form action="index.html" method="get" onsubmit="return false">
-                <fieldset>
-                    <legend>Contato</legend>
-                    <div>
-                        <labe for="idNm">Nome</labe>
-                        <input type="text" name="txtNm" id="idNm" placeholder="Nome">
-                    </div>
-                    <div>
-                        <labe for="idEmail">Email</labe>
-                        <input type="text" name="txtEmail" id="idEmail" placeholder="Email">
-                    </div>
-                    <div>
-                        <input type="submit" value="Enviar">
-                    </div>
-                </fieldset>
-            </form>
-        </div>
-
     </footer>
 
 </body>
