@@ -1,3 +1,7 @@
+@import url("./conteudo.css");
+@import url("./break-point-1004px.css");
+@import url("./cabecalho.css");
+
 *{
     margin: 0;
     padding: 0;
