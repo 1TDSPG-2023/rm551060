@@ -23,3 +23,8 @@ btn.addEventListener("click", function(){
     this.setAttribute("style", `background-color:rgb(${r},${g},${b});`);
 
 });
+
+const tits = document.querySelector(".tit-sec");
+tits.addEventListener("click", () => {
+    tits.setAttribute("style","font-size:30px");
+} );
