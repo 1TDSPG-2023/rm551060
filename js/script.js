@@ -62,3 +62,20 @@
 // frutas.forEach( (fruta)=> {
 //     console.log(`Olha ela: ${fruta}`)
 // });
+
+let nr1 = [1,2,3,4,5];
+let nr2 = [6,7,8,9,10];
+//concatenando array
+let nr3 = [nr1,nr2]
+//percorrendo o novo array com forEach
+nr3.forEach((nr) =>{
+    console.log(`Item do novo array: ${nr3}`);
+});
+
+//concatenando o array com o operador spread(...)
+nr3 = [...nr1,...nr2];
+console.log(`novo array com spread: ${nr3}`)
+//percorrendo o novo array com forEach
+nr3.forEach((nr) =>{
+    console.log(`Item do novo array: ${nr}`);
+});
