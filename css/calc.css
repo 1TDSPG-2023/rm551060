@@ -12,3 +12,14 @@
 .btn-calc button, .oper-calc button, .result-calc button{
     flex-grow: 1;
 }
+
+.btn-calc button{
+    width: 30%;
+}
+
+.visor-calc input{
+    width: 97%;
+    height: 40px;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
