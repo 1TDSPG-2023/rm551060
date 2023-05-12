@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layout Flex</title>
-<link rel="stylesheet" href="css/estilo.css">
+
+    <link rel="stylesheet" href="./css/estilo.css">
+
+    <script src="./js/script.js" defer></script>
+
+
 </head>
 
 <body>
@@ -19,7 +24,38 @@
         </nav>
     </header>
 
-    <h2 class="tit-sec">Seção de fotos</h2>
+    <h2 class="tit-sec" id="meu-tit">Seção de fotos</h2>
+
+    <!-- <button onclick="alert(document.querySelector('.tit-sec').textContent)">Bem vindo</button> -->
+        <button id="meu-btn">Click</button>
+
+    <script>
+        //declarando variaveis
+        // var nr1 = 10;
+        // var nr2 = 5;
+
+        // //imprimir as variaveis com o objeto console.
+        // console.log(nr1)
+        // console.log(nr2)
+        
+        // //Realizando operações matemáticas
+        // console.log(`resultado: ${nr1+nr2}`);
+        // console.log(`resultado: ${nr1-nr2}`);
+        // console.log(`resultado: ${nr1*nr2}`);
+        // console.log(`resultado: ${nr1/nr2}`);
+
+        "use strict";
+
+        //A diferença entre var/let/const
+        var nome1 = "Yago";
+        let nome2 = "Denner";
+        const nome3 = "Jaci";
+
+        
+
+
+
+    </script>
 
     <section class ="conteudo">
         <div>
@@ -50,31 +86,34 @@
 
     <footer class="rodape">
         <h2>Fale conosco</h2>
+        
+        <form action="/info.html" method="get">
+            <fieldset>
+                <legend>Login</legend>
+                <div>
+                    <label for="idUser">Usuário</label>
+                    <input type="text" name="txtUser" id="idUser" placeholder="Usuário">
+                </div>
+                <div>
+                    <label for="idPass">Senha</label>
+                    <input type="password" name="txtPass" id="idPass" placeholder="Senha">
+                </div>
+                <div>
+                    <label for="idGravaDados">Gravar Dados</label>
+                    <input type="checkbox" name="chkDta" id="idGravaDados" value="ok" placeholder="Usuário">
+                </div>
+                <div>
+                    <button type="submit" value="Login"></button>
+                </div>
+            </fieldset>
+        </form>
+
+
         <nav>
             <a href="#"><img src="./img/social-1.png" alt="logo"></a>
             <a href="#"><img src="./img/social-2.png" alt="logo"></a>
             <a href="#"><img src="./img/social-3.png" alt="logo"></a>
         </nav>
-
-        <div>
-            <form action="index.html" method="get" onsubmit="return false">
-                <fieldset>
-                    <legend>Contato</legend>
-                    <div>
-                        <labe for="idNm">Nome</labe>
-                        <input type="text" name="txtNm" id="idNm" placeholder="Nome">
-                    </div>
-                    <div>
-                        <labe for="idEmail">Email</labe>
-                        <input type="text" name="txtEmail" id="idEmail" placeholder="Email">
-                    </div>
-                    <div>
-                        <input type="submit" value="Enviar">
-                    </div>
-                </fieldset>
-            </form>
-        </div>
-
     </footer>
 
 </body>

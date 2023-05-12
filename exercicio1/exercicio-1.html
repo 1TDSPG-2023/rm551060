@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício</title>
+    <script src="/exercicio1/exercicio.js" defer></script>
+</head>
+<body>
+    <header>  
+        <button id="cor-botao">Clique aqui para mudar a cor da página</button>
+    </header>
+
+    <section class="formulario">
+        <form action="/exercicio1/exercicio-1.html" method="get" onsubmit="return false">
+            <fieldset>
+                <div>
+                    <label for="idDado">Dados para adicionar na lista:</label>
+                    <input type="text" name="txtDado" id="idDado" placeholder="Dados">
+                </div>
+                <div>
+                    <input type="submit" value="Enviar">
+                </div>
+            </fieldset>
+        </form>
+    </section>
+
+    <section class="imagem">
+        <img src="/img/logo.png" alt="lobo" id="lobo">
+        <div>
+            <button id="trocar-img">Clique aqui para trocar a imagem</button>
+            <button id="voltar">Clique aqui para voltar a imagem</button>
+        </div>
+    </section>
+
+    <section>
+        <p id="texto">Se tem algo que acaba com o meu dia é a noite</p>
+        <button id="mostrar">Clique aqui para ver a mensagem subliminar</button>
+        <button id="apagar">Clique aqui para esconder a mensagem subliminar</button>
+    </section>
+
+
+</body>
+</html>
