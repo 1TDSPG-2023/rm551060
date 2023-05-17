@@ -29,10 +29,11 @@ listaDeUsuarios.push(usuario2);
 
 
 addEventListener("click", (evt) => {
+    const inputUser = document.querySelector("#idUser");
+    const inputPass = document.querySelector("#idPass");
+
     
     if(evt.target.id == "btnSubmit"){
-        const inputUser = document.querySelector("#idUser");
-        const inputPass = document.querySelector("#idPass");
         
         try {
             listaDeUsuarios.forEach((usuario)=> {
@@ -52,10 +53,17 @@ addEventListener("click", (evt) => {
             } else{
                 msgError.setAttribute("style", "color:#ff0000;");
                 msgError.innerHTML = "<span><strong>Usuario ou senha invalidos!</strong></span>";
-
             }
         }
         
+    } else if(evt.target.className == "fa fa-eye"){
+        //mostrnado senha
+        if(inputPass.getAttribute("type") == "password"){
+            inputPass.setAttribute("type", "text");
 
+        } else {
+        //Ocultando a senha
+            inputPass.setAttribute("type", "password");          
+        }
     }
 });
