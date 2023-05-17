@@ -1,32 +1,39 @@
-//Gerando um token com Math.
-let tokenGerado = Math.random().toString(16).substring(2);
+// //criando lista de objetos
+// let listaDeUsuarios = [
+//     {
+//         nomeCompleto : "Denden da Silva",
+//         nomeUsuario : "denden",
+//         senhaUsuario : "123456"
+//     },
+//     {
+//         nomeCompleto : "Gersu da Silva",
+//         nomeUsuario : "gege",
+//         senhaUsuario : "123456"
+//     },
+//     {
+//         nomeCompleto : "José da Silva",
+//         nomeUsuario : "jose",
+//         senhaUsuario : "123456"
+//     },
+//     {
+//         nomeCompleto : "Paulo das Couves",
+//         nomeUsuario : "paulo",
+//         senhaUsuario : "123456"
+//     },
+//     {
+//         nomeCompleto : "Mary Help",
+//         nomeUsuario : "mary",
+//         senhaUsuario : "123456"
+//     },
+//     {
+//         nomeCompleto : "Pedro Silva",
+//         nomeUsuario : "pedro",
+//         senhaUsuario : "123456"
+//     }
+// ];
 
-//declarando objetos
-const usuario1 = {
-    nomeUsuario : "denden",
-    senhaUsuario : "12345",
-    gravaDados : true,
-    token : tokenGerado
-};
-
-let novoNomePropripriedade = "tokenzinho";
-usuario1[novoNomePropripriedade] = 12;
-//console.log(usuario1.tokenzinho);
-
-
-let tokenGerado2 = Math.random().toString(16).substring(2);
-
-const usuario2 = {
-    nomeUsuario : "gege",
-    senhaUsuario : "12345",
-    gravaDados : true,
-    token : tokenGerado
-};
-
-let listaDeUsuarios = [];
-listaDeUsuarios.push(usuario1);
-listaDeUsuarios.push(usuario2);
-
+// //guardar a lista de objetos no local-storage
+// localStorage.setItem("listaUser", JSON.stringify(listaDeUsuarios));
 
 addEventListener("click", (evt) => {
     const inputUser = document.querySelector("#idUser");
@@ -36,6 +43,10 @@ addEventListener("click", (evt) => {
     if(evt.target.id == "btnSubmit"){
         
         try {
+
+            //Recuperar a lista de usuários do localStorage
+            let listaDeUsuarios = JSON.parse(localStorage.getItem("listaUser"));
+
             listaDeUsuarios.forEach((usuario)=> {
                 
                 if(inputUser.value == usuario.nomeUsuario && inputPass.value == usuario.senhaUsuario){
@@ -50,6 +61,10 @@ addEventListener("click", (evt) => {
             if(msg == "Validado" ){
                 msgError.setAttribute("style", "color:#00ff00;");
                 msgError.innerHTML = "<span><strong>Login efetuado com sucesso!</strong></span>";
+                //redirect espera 3 segundos antes de redirecionar
+                setTimeout(function(){
+                    window.location.href = "../pages/sucesso.html";
+                }, 3000);
             } else{
                 msgError.setAttribute("style", "color:#ff0000;");
                 msgError.innerHTML = "<span><strong>Usuario ou senha invalidos!</strong></span>";
