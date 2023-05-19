@@ -73,6 +73,12 @@ addEventListener("click", (evt) => {
                 
                 //Adicionando o objeto usuário-validado
                 localStorage.setItem("user-validado", JSON.stringify(usuarioValidado));
+
+                //criando token de autenticação
+                
+                const token = Math.random().toString(16).substring(2)+Math.random().toString(16).substring(2);
+                //adicionando o token no localStorage
+                localStorage.setItem("user-token", token);
                 
                 //redirect espera 3 segundos antes de redirecionar
                 setTimeout(function(){
